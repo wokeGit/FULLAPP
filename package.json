@@ -1,0 +1,14 @@
+{
+  "name": "fullApp",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "3.9.0",
+    "bower": "1.4.1",
+    "angular": "1.4.1",
+    "bootstrap": "3.3.5",
+    "angular-ui-router": "0.2.15"
+  },
+  "devDependencies": {
+    "express": "^4.13.0"
+  }
+}

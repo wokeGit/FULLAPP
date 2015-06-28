@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" ng-app="fullapp">
+  <head>
+    <meta charset="utf-8">
+    <title>fullapp</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/app/style/app.css">
+
+    <link rel="stylesheet" href="/app/style/bootstrap/bootstrap.css">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div ng-include="'app/components/navigation/navbar.html'"></div>
+
+      <div ui-view></div>
+
+      <hr>
+
+      <div ng-include="'app/components/footer/footer.html'"></div>
+
+    </div>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+
+    <script src="app/constants/app.js"></script>
+    <script src="app/constants/app.routes.js"></script>
+    <script src="app/constants/app.run.js"></script>
+
+    <script src="app/index.controller.js"></script>
+    <script src="app/components/navigation/navbar.controller.js"></script>
+    <script src="app/views/about/about.controller.js"></script>
+    <script src="app/views/home/home.controller.js"></script>
+
+
+  </body>
+</html>
