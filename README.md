@@ -1,0 +1,3 @@
+# FULLAPP
+Simple MEAN App
+
