@@ -19,6 +19,11 @@ angular.module('fullapp')
         url: '/about',
         templateUrl: 'app/views/about/about.html',
         controller: 'AboutCtrl'
+      })
+      .state('pushups', {
+        url: '/pushups',
+        templateUrl: 'app/views/pushups/pushups.html',
+        controller: 'PushUpsCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
