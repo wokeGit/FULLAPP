@@ -15,6 +15,7 @@ gulp.task('server', function(){
 
 	app.use('/app', express.static(__dirname + '/app'));
 	app.use('/node_modules', express.static(__dirname + '/node_modules'));
+	app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 	app.listen(3000, function() {
 		console.log('I\'m Listening...');

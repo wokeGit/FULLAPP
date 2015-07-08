@@ -2,7 +2,8 @@
 
 angular.module('fullapp', [ 
 	'ui.router',
-	'ui.bootstrap'
+	'ui.bootstrap',
+	'ngCkeditor'
 	])
 	.constant("APPCONSTANTS", {
         "APPNAME": "fullapp",
