@@ -1,24 +1,16 @@
+<div ng-controller="AddPushUpCtrl as vm" style="" class="well">
+
 	<div class="row">
 		<div class="col-md-12 col-lg-12">
 			<div class="row">
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-					<h3>{{pushupElement.title}}</h3>
-				</div>	
-				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-					<div class="pull-right" style="margin-top: 16px;">
-						<button type="button" class="btn btn-primary btn-sm">
-							Opinie <span class="badge ">4</span>
-						</button>
-						<button type="button" class="btn btn-primary btn-sm">
-							Ulubione
-						</button>
-					</div>
+					<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="" placeholder="Nazwa pompki">
+
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12 col-lg-12">
-					<img src="app/asserts/images/regular-push-ups.jpg" class="img-responsive" style="width:50%; float: right;" alt="Responsive image">
 					<p>
 						Trudność: <rating ng-model="pushupElement.difficultRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
 						<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
@@ -28,16 +20,19 @@
 						<span class="label label-primary" style="margin-right: 3px;" ng-repeat="member in pushupElement.dependientParties">{{member}}</span>  
 					</p>
 
-					<div ng-bind-html="thisCanBeusedInsideNgBindHtml">
-
-					</div>
+					<textarea ckeditor="vm.editorOptions" ng-model="vm.modelName"></textarea>
 
 				</div>
 
 			</div>
-
-			<div class="col-md-12 col-lg-12">
-				<button type="button" class="btn btn-primary center-block">Pokaż więcej</button>
-			</div>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+			<button type="button" class="btn btn-success">Zapisz</button>
+			<button ui-sref="pushups" type="button" class="btn btn-default">Anuluj</button>
+		</div>
+	</div>
+
+</div>

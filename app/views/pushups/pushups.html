@@ -1,10 +1,16 @@
 <div class="row" ng-controller="PushUpsCtrl as vm">
 
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<button ui-sref=".add" type="button" class="btn btn-danger">Dodaj</button>
+	</div>
+
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h1>Rodzaje pompek</h1>
 	</div>
 
 	<div class="col-md-8 col-lg-8">
+
+		<div ui-view></div>
 		
 		<div class="row">
 			<div class="col-md-12 col-lg-12">
@@ -59,10 +65,6 @@
 		</div>
 
 		<push-up pushup-element="vm.pushups[0]"></push-up>
-
-		<textarea ckeditor="vm.editorOptions" ng-model="vm.modelName"></textarea>
-
-		{{vm.modelName}}
 
 	</div>
 
