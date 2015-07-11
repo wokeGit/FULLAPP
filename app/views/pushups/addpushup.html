@@ -4,23 +4,22 @@
 		<div class="col-md-12 col-lg-12">
 			<div class="row">
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-					<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="" placeholder="Nazwa pompki">
-
+					<input type="text" ng-model="vm.newPushup.title" name="" id="input" class="form-control" value="" required="required" pattern="" title="" placeholder="Nazwa pompki">
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-md-12 col-lg-12">
 					<p>
-						Trudność: <rating ng-model="pushupElement.difficultRate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
-						<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+						Trudność: <rating ng-model="vm.newPushup.difficultRate" max="vm.difficult.max" readonly="vm.difficult.isReadonly" on-hover="vm.hoveringOver(value)" on-leave="vm.overStar = null"></rating>
+						<span class="label" ng-class="{'label-warning': vm.percent<30, 'label-info': vm.percent>=30 && vm.percent<70, 'label-success': vm.percent>=70}" ng-show="vm.overStar && !vm.isReadonly">{{vm.percent}}%</span>
 					</p>
 					<p>
 						Partie na jakie działa:
-						<span class="label label-primary" style="margin-right: 3px;" ng-repeat="member in pushupElement.dependientParties">{{member}}</span>  
+						<tags-input ng-model="vm.newPushup.dependientParties" placeholder="Dodaj tag"></tags-input>
 					</p>
 
-					<textarea ckeditor="vm.editorOptions" ng-model="vm.modelName"></textarea>
+					<textarea ckeditor="vm.editorOptions" ng-model="vm.newPushup.description"></textarea>
 
 				</div>
 
@@ -28,11 +27,13 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">	
+	<div class="row" style="margin-top: 15px">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<button type="button" class="btn btn-success">Zapisz</button>
-			<button ui-sref="pushups" type="button" class="btn btn-default">Anuluj</button>
+			<button type="button" class="btn btn-default" ng-click="vm.open('sm')">Anuluj</button>
 		</div>
 	</div>
+
+	<push-up pushup-element="vm.newPushup"></push-up>
 
 </div>

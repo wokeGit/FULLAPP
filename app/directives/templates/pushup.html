@@ -1,0 +1,45 @@
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="row">
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					<h3>{{pushupElement.title}}</h3>
+				</div>	
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div class="pull-right" style="margin-top: 16px;">
+						<button type="button" class="btn btn-primary btn-sm">
+							Opinie <span class="badge ">4</span>
+						</button>
+						<button type="button" class="btn btn-primary btn-sm">
+							Ulubione
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<p>
+						Trudność: <rating ng-model="pushupElement.difficultRate" max="max" readonly="true" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+					</p>
+					<p>
+						Partie na jakie działa:
+						<span class="label label-primary" style="margin-right: 3px;" ng-repeat="member in pushupElement.dependientParties">{{member}}</span>  
+					</p>
+
+					<div ng-bind-html="thisCanBeusedInsideNgBindHtml()"></div>
+
+				</div>
+
+			</div>
+
+				<!-- <div class="row">
+					<div class="col-md-12 col-lg-12">
+						<button type="button" class="btn btn-primary center-block" ng-click="toggleVisible()" style="margin-top: 10px; margin-bottom: 10px;">
+							Pokaż 
+							<span ng-show="showFull">więcej</span>
+							<span ng-show="!showFull">mniej</span>
+						</button>
+					</div>
+				</div> -->		
+		</div>
+	</div>

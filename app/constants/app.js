@@ -3,7 +3,9 @@
 angular.module('fullapp', [ 
 	'ui.router',
 	'ui.bootstrap',
-	'ngCkeditor'
+	'ngCkeditor',
+	'ngTagsInput',
+	'ngSanitize'
 	])
 	.constant("APPCONSTANTS", {
         "APPNAME": "fullapp",

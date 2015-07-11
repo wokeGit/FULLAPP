@@ -12,58 +12,6 @@
 
 		<div ui-view></div>
 		
-		<div class="row">
-			<div class="col-md-12 col-lg-12">
-				<div class="row">
-					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-						<h3>Pompki klasyczne</h3>
-					</div>	
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-						<div class="pull-right" style="margin-top: 16px;">
-							<button type="button" class="btn btn-primary btn-sm">
-								Opinie <span class="badge ">4</span>
-							</button>
-							<button type="button" class="btn btn-primary btn-sm">
-								Ulubione
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12 col-lg-12">
-						<img src="app/asserts/images/regular-push-ups.jpg" class="img-responsive" style="width:50%; float: right;" alt="Responsive image">
-						<p>
-							Trudność: <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
-							<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
-						</p>
-						<p>
-							Partie na jakie działa: 
-							<span class="label label-primary">Klatka</span>
-							<span class="label label-primary">Biceps</span>
-							<span class="label label-primary">Triceps</span>
-							<span class="label label-primary">Plecy</span>
-						</p>
-						<p>
-							Get into a plank position with hands planted directly under the shoulders (slightly wider than shoulder width apart). Ground the toes into the floor to stabilize the bottom half of the body. Engage the abs and back so the body is neutral. In other words, flat as a… plank (ah, now we get it!).
-						</p>
-						<p>
-							2. Begin to lower the body — back flat, eyes focused about three feet in front of you to keep a neutral neck— until the chest nearly touches the floor. (Note: Some experts say a push-up isn’t a push-up unless the chest actually grazes the ground). Don’t let the butt dip or stick out at any point during the move; the body should remain flat from head to toe all the way through the movement. Draw the shoulder blades back and down, while keeping the elbows tucked close to the body, so the upper arms form a 45-degree angle at the bottom of the push-up position.
-						</p>
-						
-						<p>
-							3. Keeping the core engaged, exhale as you push back to the start position as explosively as possible without leaving the ground (pow!). That’s one! Repeat for 10-20 reps or as many as can be performed with good form (no sagging those hips, ya heard?).
-						</p>
-						
-					</div>
-				</div>
-
-				<div class="col-md-12 col-lg-12">
-					<button type="button" class="btn btn-primary center-block">Pokaż więcej</button>
-				</div>
-			</div>
-		</div>
-
 		<push-up pushup-element="vm.pushups[0]"></push-up>
 
 	</div>
@@ -86,28 +34,6 @@
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
-
-
-	<!-- <div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			
-			<h4>Default</h4>
-		    <rating ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
-		    <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
-
-		    <pre style="margin:15px 0;">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre>
-
-		    <button class="btn btn-sm btn-danger" ng-click="rate = 0" ng-disabled="isReadonly">Clear</button>
-		    <button class="btn btn-sm btn-default" ng-click="isReadonly = ! isReadonly">Toggle Readonly</button>
-		    <hr />
-
-		    <h4>Custom icons</h4>
-		    <div ng-init="x = 5"><rating ng-model="x" max="15" state-on="'glyphicon-ok-sign'" state-off="'glyphicon-ok-circle'"></rating> <b>(<i>Rate:</i> {{x}})</b></div>
-		    <div ng-init="y = 2"><rating ng-model="y" rating-states="ratingStates"></rating> <b>(<i>Rate:</i> {{y}})</b></div>
-			
-		</div>
-	</div> -->
-
 	
 </div>
 
