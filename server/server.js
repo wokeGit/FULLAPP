@@ -1,5 +1,5 @@
 var express = require('express');
-var mongoose = require('mongoose');
+var mongoose = requires('mongoose');
 var app = express();
 
 app.get('/', function(req, res) {
