@@ -1,6 +1,7 @@
 var express = require('express');
-
 var router = express.Router();
+
+var pushup = require('./models/pushup.model.js');
 
 var list = [
 	{
@@ -17,13 +18,17 @@ router.get('/pushups', function(req, res) {
 });
 
 router.post('/pushups', function(req, res){
-	var newItem = req;
+	var newItem = req.body.name;
+	console.log(req)
 	console.log(newItem);
+	console.log(req.query)
 
 	// list.push({
 	// 	title: newItem.title,
 	// 	difficultRate: newItem.rate
 	// })
+	res.status(200).json({title: "Hello express, its me " + newItem})
+	//res.redirect('/');
 });
 
 module.exports = router;
